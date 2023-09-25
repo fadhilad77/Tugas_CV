@@ -1,0 +1,237 @@
+body, html {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    background: linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 35px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #ececec, #cfcfcf);
+    border-bottom: 3px solid #b3b3b3;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card-header:hover {
+    background-image: linear-gradient(45deg, #ddd, #bbb);
+}
+
+.card-header:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+h3.text-muted {
+    font-size: 1.5em;
+    color: #7f8c8d;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.profile-pic {
+    width: 70%;
+    height: auto;
+    max-width: 250px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(20%) drop-shadow(0px 0px 5px #555);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-img {
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.carousel-inner img.carousel-img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.carousel-control-prev:active .carousel-control-prev-icon,
+.carousel-control-next:active .carousel-control-next-icon {
+    transform: scale(0.85);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hover-effect:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.hover-effect:hover td {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.bg-grey {
+    background-color: #d3d3d3;
+}
+
+ul.list-unstyled {
+    padding-left: 0;
+}
+
+ul.list-unstyled li {
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+ul.list-unstyled li:hover {
+    background-color: #e0e0e0;
+    transform: translateX(10px);
+}
+
+.fas, .fab {
+    color: #2c3e50;
+    transition: color 0.3s;
+}
+
+ul.list-unstyled li:hover .fas, 
+ul.list-unstyled li:hover .fab {
+    color: #e74c3c;
+}
+
+.label-column {
+    width: 160px;
+    text-align: left;
+    padding-right: 15px;
+    vertical-align: top;
+    font-weight: 600;
+}
+
+.table-borderless td {
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .label-column {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .card-header {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3.text-muted {
+        font-size: 1.2em;
+    }
+
+    .carousel-inner img.carousel-img {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h3.text-muted {
+        font-size: 1em;
+    }
+
+    .profile-pic {
+        max-width: 130px;
+        height: 130px;
+    }
+
+    .label-column {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .carousel-inner img.carousel-img {
+        max-height: 200px;
+    }
+}
+
+.carousel-caption h5 {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.carousel-caption p {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.col-md-8 .card {
+    margin-top: 1rem;
+}
+
